@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28af9b54405c35b4097bc6a8d4709ec3, type: 3}
+  m_Name: Data2
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelID: 
+  displayName: 
+  thumbnail: {fileID: 0}
+  sceneBuildIndex: -1
+  timeLimit: 0
+  hasObjective: 0
+  objectiveDescription: 
+  spawns:
+  - name: Jugador
+    prefab: {fileID: 2691069034578423725, guid: 0bdd85bbd5e10754998076b8675e8358, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: Enemigo
+    prefab: {fileID: 7387410422969871645, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: Mapa
+    prefab: {fileID: 9050589820708751238, guid: ba078fb8e6c1528438561d7d6fb42f42, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: Lleguada
+    prefab: {fileID: 4203305223763612699, guid: f5b0897e404eb644dac9a2b523a9f479, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: Cronometro
+    prefab: {fileID: 2325200428683846695, guid: fa08e15aaea32724fbb0a07abdcccefe, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: HuD
+    prefab: {fileID: 3979651661143821406, guid: 0c96055c604f5de41ae7c06f6c76cde7, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: Ganaste
+    prefab: {fileID: 2585793476275120469, guid: 90dd01121a2f5a74085fd6f2ff4dc9ba, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: Perdiste
+    prefab: {fileID: 7552308988433600713, guid: fe00a6611b28c184fb3c38a15ca60e32, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  - name: Corazones
+    prefab: {fileID: 3273574558784153606, guid: 6a4a2af4dace0374e89c5dcb89e1dec5, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    eulerRotation: {x: 0, y: 0, z: 0}
+    count: 0
+    spacing: {x: 0, y: 0, z: 0}
+  music: {fileID: 0}
+  ambientColor: {r: 1, g: 1, b: 1, a: 1}
+  locked: 0
+  recommendedScoreToUnlock: 0

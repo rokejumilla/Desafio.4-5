@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28af9b54405c35b4097bc6a8d4709ec3, type: 3}
+  m_Name: Data1
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelName: Nivel 1
+  music: {fileID: 0}
+  timeLimit: 0
+  prefabsToSpawn:
+  - {fileID: 3979651661143821406, guid: 0c96055c604f5de41ae7c06f6c76cde7, type: 3}
+  - {fileID: 4888848898813516733, guid: 3e065e8257efd4247b9a9c56654605c5, type: 3}
+  - {fileID: 9080343930737313064, guid: 4259c9c780cc0314b82fb0155d9b2438, type: 3}
