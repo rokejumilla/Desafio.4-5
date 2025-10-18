@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Collider2D))] // opcional, pero recomendado
-public class SpawnFromSides : MonoBehaviour
+[RequireComponent(typeof(Collider2D))]
+public class SpawnRightSide : MonoBehaviour
 {
     [Header("Prefab & timing")]
     [SerializeField] private GameObject enemyPrefab;
@@ -11,7 +11,6 @@ public class SpawnFromSides : MonoBehaviour
 
     [Header("Opciones")]
     [SerializeField] private bool useCoroutine = true;
-    [SerializeField] private bool randomSideEachSpawn = true; // ya no se usa para elegir lado, queda como opción estética
     [SerializeField] private bool useRendererIfNoCollider = true;
 
     private Collider2D col2D;
@@ -24,7 +23,7 @@ public class SpawnFromSides : MonoBehaviour
             rend = GetComponent<Renderer>();
 
         if (enemyPrefab == null)
-            Debug.LogWarning("SpawnFromSides: enemyPrefab no asignado.");
+            Debug.LogWarning("SpawnRightSide: enemyPrefab no asignado.");
     }
 
     private void Start()
@@ -65,65 +64,33 @@ public class SpawnFromSides : MonoBehaviour
             // Fallback: asumir un cuadrado de tamaño 1 centrado en transform
             Vector3 center = transform.position;
             bounds = new Bounds(center, Vector3.one);
-            Debug.LogWarning("SpawnFromSides: No Collider2D ni Renderer. Usando bounds 1x1 de fallback.");
+            Debug.LogWarning("SpawnRightSide: No Collider2D ni Renderer. Usando bounds 1x1 de fallback.");
         }
 
-        // FORZAR siempre el lado "Arriba" (0)
-        int side = 0;
-        Vector3 spawnPos = CalculateSpawnPosition(bounds, side, spawnOffset);
+        Vector3 spawnPos = CalculateRightSpawnPosition(bounds, spawnOffset);
 
         // instanciar enemigo (sin rotación)
         Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
     }
 
-    // calcula la posición fuera del borde según el lado
-    private Vector3 CalculateSpawnPosition(Bounds b, int sideIndex, float offset)
+    // calcula la posición fuera del borde derecho
+    private Vector3 CalculateRightSpawnPosition(Bounds b, float offset)
     {
-        float minX = b.min.x;
-        float maxX = b.max.x;
         float minY = b.min.y;
         float maxY = b.max.y;
+        float maxX = b.max.x;
 
         Vector3 pos = Vector3.zero;
 
-        switch (sideIndex)
-        {
-            case 0: // Arriba
-                pos.x = Random.Range(minX, maxX);
-                pos.y = maxY + offset;
-                break;
-            case 1: // Derecha (no usado)
-                pos.x = maxX + offset;
-                pos.y = Random.Range(minY, maxY);
-                break;
-            case 2: // Abajo (no usado)
-                pos.x = Random.Range(minX, maxX);
-                pos.y = minY - offset;
-                break;
-            case 3: // Izquierda (no usado)
-                pos.x = minX - offset;
-                pos.y = Random.Range(minY, maxY);
-                break;
-            default:
-                pos = b.center;
-                break;
-        }
+        pos.x = maxX + offset; // justo a la derecha del bounds
+        pos.y = Random.Range(minY, maxY); // posición aleatoria a lo largo del lado derecho
 
         // conservar z del prefab (si usas 2D usualmente z = 0)
-        pos.z = enemyPrefab.transform.position.z;
+        pos.z = enemyPrefab != null ? enemyPrefab.transform.position.z : 0f;
         return pos;
     }
 
-    // si no querés totalmente aleatorio, este método itera lados 0..3 (ya no se usa)
-    private int sequentialSide = 0;
-    private int NextSide()
-    {
-        int s = sequentialSide;
-        sequentialSide = (sequentialSide + 1) % 4;
-        return s;
-    }
-
-    // Gizmos para visualizar bounds y un ejemplo de punto de spawn ARRIBA
+    // Gizmos para visualizar bounds y ejemplo de punto de spawn a la derecha
     private void OnDrawGizmosSelected()
     {
         Collider2D c = GetComponent<Collider2D>();
@@ -138,8 +105,10 @@ public class SpawnFromSides : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(b.center, b.size);
 
-        // dibujar solo el punto de spawn superior (a distancia offset)
+        // dibujar un punto de ejemplo en la derecha (a distancia spawnOffset)
         Gizmos.color = Color.cyan;
-        Gizmos.DrawSphere(new Vector3(Random.Range(b.min.x, b.max.x), b.max.y + spawnOffset, 0), 0.08f);
+        float exampleY = Random.Range(b.min.y, b.max.y);
+        Vector3 examplePoint = new Vector3(b.max.x + spawnOffset, exampleY, 0f);
+        Gizmos.DrawSphere(examplePoint, 0.08f);
     }
 }
