@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 13700e2c95f1bbb4d9e6e054e4630ab9
+guid: 1ed68f71eafa1e94090428ef99b82689
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3411079232190815746
-    second: SuperMarioBrosMap1-1_0
+      213: -2727194386381995188
+    second: tile_0002_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SuperMarioBrosMap1-1_0
+      name: tile_0002_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 3584
-        height: 480
+        width: 22
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20e127f2d76965f20800000000000000
-      internalID: 3411079232190815746
+      spriteID: c430346a72f072ad0800000000000000
+      internalID: -2727194386381995188
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SuperMarioBrosMap1-1_0: 3411079232190815746
+      tile_0002_0: -2727194386381995188
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
