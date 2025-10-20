@@ -45941,7 +45941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163c11db42a24544db4352ab66fd1fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnFromSides
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 776869667}
   spawnInterval: 2
   spawnOffset: 0.5
   useCoroutine: 0
@@ -46398,6 +46398,68 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.17, y: 0.14}
   m_EdgeRadius: 0
+--- !u!1001 &776869666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 69.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409056687596010903, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7387410422969871645, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+--- !u!1 &776869667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7387410422969871645, guid: 7d7d5d9111f0dfa4a98769bf3ebf910e, type: 3}
+  m_PrefabInstance: {fileID: 776869666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &799254372 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8934285278180935890, guid: 2163171804b501847b0ab8861db48ae2, type: 3}
@@ -46694,7 +46756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163c11db42a24544db4352ab66fd1fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnFromSides
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 776869667}
   spawnInterval: 2
   spawnOffset: 0.5
   useCoroutine: 0
@@ -47675,7 +47737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe607d750951ed4eb8118f083d2cd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnRightSide
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 776869667}
   spawnInterval: 2
   spawnOffset: 0.5
   useCoroutine: 1
@@ -48541,7 +48603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1357c2e84d7994384741f660aa8e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnFromLeft
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 776869667}
   spawnInterval: 2
   spawnOffset: 0.5
   useCoroutine: 1
@@ -48777,7 +48839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163c11db42a24544db4352ab66fd1fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnFromSides
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 776869667}
   spawnInterval: 2
   spawnOffset: 0.5
   useCoroutine: 0
@@ -50217,3 +50279,4 @@ SceneRoots:
   - {fileID: 1311305959}
   - {fileID: 887933295}
   - {fileID: 581049754461242312}
+  - {fileID: 776869666}
